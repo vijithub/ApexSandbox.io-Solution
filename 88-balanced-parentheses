@@ -1,0 +1,21 @@
+public Boolean isValid(String s){
+	if (s == null  || ((Math.mod(s.length(), 2)) != 0)) {
+        		return false;
+    	} else {
+        	String[] StringCharacters = s.split('');
+        	System.debug('StringCharacters:' + StringCharacters);
+       	 
+        	for (String str : StringCharacters) {
+            	if (!(str == '{' || str == '[' || str == '(' || str == '}' || str == ']' || str == ')')) {
+                		return false;
+            	}
+        	}
+    	}    
+   	 
+    	while (s.contains('()') || s.contains('[]') || s.contains('{}')) {
+        	s = s.replaceAll('\\(\\)', '')
+            	.replaceAll('\\[\\]', '')
+            	.replaceAll('\\{\\}', '');
+    	}
+    	return (s.length() == 0);
+}
