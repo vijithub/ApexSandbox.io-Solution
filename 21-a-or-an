@@ -1,0 +1,10 @@
+public String aOrAn(String word) {
+	List<String> vowelLst = new List<String>{'a', 'e', 'i', 'o','u'};
+
+	for(String s: vowelLst){
+    	if(word.startsWith(s)){       	 
+        		return ('an ' + word);
+    	}
+	}
+	return ('a ' + word);
+}
