@@ -1,8 +1,12 @@
 public Boolean isLeapYear(Integer year) {
     //code here
+    // year divisible by 4 is a leap year, 
+    // if it is not a century
     Boolean bLeapYear = false;
 
     if(Math.mod(year,4) == 0){
+        bLeapYear = true;
+    } else if(Math.mod(year,100) == 0){
         bLeapYear = true;
     }
 
