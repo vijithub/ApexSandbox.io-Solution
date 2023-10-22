@@ -1,0 +1,14 @@
+public String formatName(String firstName, String lastName) {
+    //code here
+    String formattedName;
+
+    if(String.IsBlank(firstName) && String.IsBlank(lastName)){
+        formattedName = '';
+    } else if(String.IsBlank(firstName)){
+        formattedName = lastName;
+    } else if(String.IsBlank(lastName)){
+        formattedName = firstName;
+    } else{
+        formattedName = lastName + ', ' + firstName;
+    }
+}
