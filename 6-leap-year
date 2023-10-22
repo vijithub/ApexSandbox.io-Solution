@@ -3,15 +3,15 @@ public Boolean isLeapYear(Integer year) {
     // A leap year occurs every four years within a century, 
     // and only on the century if it is divisible by 400.... 
     // 2000 is divisible by 400, whereas 1900 is not.
-    Boolean bLeapYear = false;
+    Boolean isLeap = false;
 
    
     if((Math.mod(year,100) == 0) && (Math.mod(year,400) != 0)){
-        bLeapYear = false;
+        isLeap = false;
     } else  if((Math.mod(year,4) == 0)){
-        bLeapYear = true;
+        isLeap = true;
     } 
 
-    return bLeapYear;
+    return isLeap;
 
 }
