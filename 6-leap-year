@@ -4,10 +4,10 @@ public Boolean isLeapYear(Integer year) {
     // if it is not a century
     Boolean bLeapYear = false;
 
-    if((Math.mod(year,4) == 0) && (Math.mod(year,100) == 0)){
+    if((Math.mod(year,4) == 0) && (Math.mod(year,100) != 0)){
         bLeapYear = true;
     } 
-    
+
     return bLeapYear;
 
 }
