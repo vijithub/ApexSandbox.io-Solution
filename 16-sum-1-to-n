@@ -5,6 +5,6 @@ public Integer sumToN(Integer n) {
         sumN += i;
     }
 
-    // return sumN;
-    return n*(n+1)/2;
+    return sumN;
+    // return n*(n+1)/2;
 }
