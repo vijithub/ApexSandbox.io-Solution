@@ -28,6 +28,21 @@ public Boolean companionPlants(String plant1, String plant2) {
     return validCompanionPairs.contains(plantPair);
     */
 
+    Map<String, Set<String>> validCompanions = new Map<String, Set<String>>{
+        'onions' => new Set<String>{'lettuce', 'carrots', 'tomatoes'},
+        'lettuce' => new Set<String>{'cucumbers', 'onions'},
+        'cucumbers' => new Set<String>{'lettuce'},
+        'carrots' => new Set<String>{'onions'},
+        'tomatoes' => new Set<String>{'onions'}
+    };
+
+    if (validCompanions.containsKey(plant1)) {
+        Set<String> companions = validCompanions.get(plant1);
+        return companions.contains(plant2);
+    }
+
+    return false;
+
     /*
     Map<String, List<String>> companionPlantMap = new Map<String, List<String>>{
         'onions' => new List<String>{'lettuce', 'carrots', 'tomatoes'},
@@ -99,5 +114,5 @@ switch on plant1 {
          return false; // Default case
      }
  }
- 
+
 }
