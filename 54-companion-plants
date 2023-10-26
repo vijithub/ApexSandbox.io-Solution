@@ -1,11 +1,7 @@
 public Boolean companionPlants(String plant1, String plant2) {
     //code here
-    /*
-    consider the following plants to be companions: 
-    lettuce and cucumbers, lettuce and onions, 
-    onions and carrots, and onions and tomatoes.
-    */
-    Boolean isCompanion;
+
+        Boolean isCompanion;
 
    
     return isCompanion;
