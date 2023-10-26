@@ -14,6 +14,19 @@ public Boolean companionPlants(String plant1, String plant2) {
     If none of the above match, the plants are not companions.
     */
 
+    Set<String> validCompanionPairs = new Set<String>{
+        'onionslettuce', 'onionscarrots', 'onionstomatoes',
+        'lettucecucumbers', 'lettuceonions',
+        'cucumberslettuce',
+        'carrotsonions',
+        'tomatoesonions'
+    };
+
+    String plantPair = plant1 + plant1;
+
+    return validCompanionPairs.contains(plantPair);
+
+    /*
     Map<String, List<String>> companionPlantMap = new Map<String, List<String>>{
         'onions' => new List<String>{'lettuce', 'carrots', 'tomatoes'},
         'lettuce' => new List<String>{'cucumbers', 'onions'},
@@ -29,8 +42,9 @@ public Boolean companionPlants(String plant1, String plant2) {
     } else {
         return false;
     }
+    */
 
-/*
+    /*
         Boolean isCompanion=false;
         
         if ( plant1 == 'onions' && 
