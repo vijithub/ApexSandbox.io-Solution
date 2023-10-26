@@ -4,18 +4,32 @@ public Boolean companionPlants(String plant1, String plant2) {
     consider the following plants to be companions: 
     lettuce and cucumbers, lettuce and onions, 
     onions and carrots, and onions and tomatoes.
+
+    Try structuring the correct pairs using the following logic: 
+    if the first plant is onions, the second should be lettuce, carrots, or tomatoes. 
+    If the first plant is lettuce, then the second should be cucumbers or onions. 
+    If the first plant is cucumbers, the second should be lettuce. 
+    If the first plant is carrots, the second should be onions. 
+    If the first plant is tomatoes, the second should be onions. 
+    If none of the above match, the plants are not companions.
     */
 
         Boolean isCompanion=false;
         
-        if( plant1 == 'lettuce' && 
-            (plant2 == 'cucumbers' || plant2 == 'onions')){
-            isCompanion =true;
-        } else if ( plant1 == 'onions' && 
-            (plant2 == 'carrots' || plant2 == 'tomatoes')){
+        if ( plant1 == 'onions' && 
+            (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes')){
             isCompanion =true;
         }
-
+        else if( plant1 == 'lettuce' && 
+            (plant2 == 'cucumbers' || plant2 == 'onions')){
+            isCompanion =true;
+        } else if ( plant1 == 'cucumbers' && plant2 == 'lettuce'){
+            isCompanion =true;
+        } else if ( plant1 == 'carrots' && plant2 == 'onions'){
+            isCompanion =true;
+        } else if ( plant1 == 'tomatoes' && plant2 == 'onions'){
+            isCompanion =true;
+        } 
    
         return isCompanion;
 }
