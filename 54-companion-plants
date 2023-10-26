@@ -11,6 +11,9 @@ public Boolean companionPlants(String plant1, String plant2) {
         if( plant1 == 'lettuce' && 
             (plant2 == 'cucumbers' || plant2 == 'onions')){
             isCompanion =true;
+        } else if ( plant1 == 'onions' && 
+            (plant2 == 'carrots' || plant2 == 'tomatoes')){
+            isCompanion =true;
         }
 
    
