@@ -93,7 +93,7 @@ public Boolean companionPlants(String plant1, String plant2) {
         return isCompanion;
 
 */        
-
+/*
 switch on plant1 {
      when 'onions' {
          return (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
@@ -114,5 +114,5 @@ switch on plant1 {
          return false; // Default case
      }
  }
-
+*/
 }
