@@ -46,6 +46,7 @@ public Boolean companionPlants(String plant1, String plant2) {
     }
     */
 
+/*
     if ((plant1 == 'onions' && (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes')) ||
             (plant1 == 'lettuce' && (plant2 == 'cucumbers' || plant2 == 'onions')) ||
             (plant1 == 'cucumbers' && plant2 == 'lettuce') ||
@@ -55,7 +56,7 @@ public Boolean companionPlants(String plant1, String plant2) {
     } else {
             return false;
     }
-
+*/
     /*
         Boolean isCompanion=false;
         
@@ -77,4 +78,26 @@ public Boolean companionPlants(String plant1, String plant2) {
         return isCompanion;
 
 */        
+
+switch on plant1 {
+     when 'onions' {
+         return (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
+     }
+     when 'lettuce' {
+         return (plant2 == 'cucumbers' || plant2 == 'onions');
+     }
+     when 'cucumbers' {
+         return (plant2 == 'lettuce');
+     }
+     when 'carrots' {
+         return (plant2 == 'onions');
+     }
+     when 'tomatoes' {
+         return (plant2 == 'onions');
+     }
+     when else {
+         return false; // Default case
+     }
+ }
+ 
 }
