@@ -5,9 +5,11 @@ public Boolean companionPlants(String plant1, String plant2) {
     lettuce and cucumbers, lettuce and onions, 
     onions and carrots, and onions and tomatoes.
     */
-    
+    Boolean isCompanion;
+
     if(plant1 =='lettuce' && 
         ( (plant2 =='cucumbers') || (plant2 =='onions') ){
-		return true;
+		isCompanion = true;
 	} 
+    return isCompanion;
 }
