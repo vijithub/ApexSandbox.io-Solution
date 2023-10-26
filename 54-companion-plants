@@ -22,9 +22,9 @@ public Boolean companionPlants(String plant1, String plant2) {
         'tomatoes' => new List<String>{'onions'}
     };
 
-    List<String> validCompanions = companionPlantMap.get(firstPlant);
+    List<String> validCompanions = companionPlantMap.get(plant1);
 
-    if (validCompanions != null && validCompanions.contains(secondPlant)) {
+    if (validCompanions != null && validCompanions.contains(plant2)) {
         return true;
     } else {
         return false;
