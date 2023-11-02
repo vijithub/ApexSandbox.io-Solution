@@ -27,7 +27,7 @@ public Boolean companionPlants(String plant1, String plant2) {
 
     return validCompanionPairs.contains(plantPair);
     */
-
+/*
     Map<String, Set<String>> validCompanions = new Map<String, Set<String>>{
         'onions' => new Set<String>{'lettuce', 'carrots', 'tomatoes'},
         'lettuce' => new Set<String>{'cucumbers', 'onions'},
@@ -42,7 +42,7 @@ public Boolean companionPlants(String plant1, String plant2) {
     }
 
     return false;
-
+*/
     /*
     Map<String, List<String>> companionPlantMap = new Map<String, List<String>>{
         'onions' => new List<String>{'lettuce', 'carrots', 'tomatoes'},
@@ -72,7 +72,7 @@ public Boolean companionPlants(String plant1, String plant2) {
             return false;
     }
 */
-    /*
+   
         Boolean isCompanion=false;
         
         if ( plant1 == 'onions' && 
@@ -92,7 +92,7 @@ public Boolean companionPlants(String plant1, String plant2) {
    
         return isCompanion;
 
-*/        
+      
 /*
 switch on plant1 {
      when 'onions' {
