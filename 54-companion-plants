@@ -72,7 +72,7 @@ public Boolean companionPlants(String plant1, String plant2) {
             return false;
     }
 */
-    /*
+  
         Boolean isCompanion=false;
         
         if ( plant1 == 'onions' && 
@@ -92,7 +92,7 @@ public Boolean companionPlants(String plant1, String plant2) {
    
         return isCompanion;
 
-*/        
+      
 /*
 switch on plant1 {
      when 'onions' {
