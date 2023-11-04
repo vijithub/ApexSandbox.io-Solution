@@ -13,7 +13,7 @@ public Boolean companionPlants(String plant1, String plant2) {
     If the first plant is tomatoes, the second should be onions. 
     If none of the above match, the plants are not companions.
     */
-
+/*
    
     Set<String> validCompanionPairs = new Set<String>{
         'onionslettuce', 'onionscarrots', 'onionstomatoes',
@@ -26,7 +26,7 @@ public Boolean companionPlants(String plant1, String plant2) {
     String plantPair = plant1 + plant2;
 
     return validCompanionPairs.contains(plantPair);
-    
+    */
 /*
     Map<String, Set<String>> validCompanions = new Map<String, Set<String>>{
         'onions' => new Set<String>{'lettuce', 'carrots', 'tomatoes'},
