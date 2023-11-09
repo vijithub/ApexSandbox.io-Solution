@@ -1,11 +1,11 @@
 public Boolean isTeenager(Integer age) {
     if(age>12){
-        retrun true;
+        return true;
     }
     else if(age<20){
-        retrun true;
+        return true;
     }
     else {
-        retrun false;
+        return false;
     }
 }
