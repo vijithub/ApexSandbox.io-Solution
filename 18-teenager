@@ -1,11 +1,11 @@
 public Boolean isTeenager(Integer age) {
-    if(aga>12){
+    if(age>12){
         retrun true;
     }
     else if(age<20){
         retrun true;
     }
     else {
-        retrun flase;
+        retrun false;
     }
 }
