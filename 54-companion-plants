@@ -1,11 +1,17 @@
 public Boolean companionPlants(String plant1, String plant2) {        
-          if ((plant1 == 'onions' && (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes')) ||
-            (plant1 == 'lettuce' && (plant2 == 'cucumbers' || plant2 == 'onions')) ||
-            (plant1 == 'cucumbers' && plant2 == 'lettuce') ||
-            (plant1 == 'carrots' && plant2 == 'onions') ||
-            (plant1 == 'tomatoes' && plant2 == 'onions')) {
-            return true;
-    } else {
-            return false;
-    }  
+          Map<String, List<String>> companionPlantMap = new Map<String, List<String>>{
+    'onions' => new List<String>{'lettuce', 'carrots', 'tomatoes'},
+    'lettuce' => new List<String>{'cucumbers', 'onions'},
+    'cucumbers' => new List<String>{'lettuce'},
+    'carrots' => new List<String>{'onions'},
+    'tomatoes' => new List<String>{'onions'}
+};
+
+List<String> validCompanions = companionPlantMap.get(plant1);
+
+if (validCompanions != null && validCompanions.contains(plant2)) {
+    return true;
+} else {
+    return false;
+}
     }    
