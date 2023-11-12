@@ -1,22 +1,13 @@
 public Boolean companionPlants(String plant1, String plant2) {        
-         switch on plant1 {
-     when 'onions' {
-         return (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
-     }
-     when 'lettuce' {
-         return (plant2 == 'cucumbers' || plant2 == 'onions');
-     }
-     when 'cucumbers' {
-         return (plant2 == 'lettuce');
-     }
-     when 'carrots' {
-         return (plant2 == 'onions');
-     }
-     when 'tomatoes' {
-         return (plant2 == 'onions');
-     }
-     when else {
-         return false; // Default case
-     }
- }
+           Set<String> validCompanionPairs = new Set<String>{
+        'onionslettuce', 'onionscarrots', 'onionstomatoes',
+        'lettucecucumbers', 'lettuceonions',
+        'cucumberslettuce',
+        'carrotsonions',
+        'tomatoesonions'
+    };
+
+    String plantPair = plant1 + plant2;
+
+    return validCompanionPairs.contains(plantPair);
     }    
