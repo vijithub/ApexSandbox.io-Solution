@@ -1,5 +1,21 @@
-public Boolean companionPlants(String plant1, String plant2) {        
-           Set<String> validCompanionPairs = new Set<String>{
+public Boolean companionPlants(String plant1, String plant2) {
+    //code here
+    /*
+    consider the following plants to be companions: 
+    lettuce and cucumbers, lettuce and onions, 
+    onions and carrots, and onions and tomatoes.
+
+    Try structuring the correct pairs using the following logic: 
+    if the first plant is onions, the second should be lettuce, carrots, or tomatoes. 
+    If the first plant is lettuce, then the second should be cucumbers or onions. 
+    If the first plant is cucumbers, the second should be lettuce. 
+    If the first plant is carrots, the second should be onions. 
+    If the first plant is tomatoes, the second should be onions. 
+    If none of the above match, the plants are not companions.
+    */
+/*
+   
+    Set<String> validCompanionPairs = new Set<String>{
         'onionslettuce', 'onionscarrots', 'onionstomatoes',
         'lettucecucumbers', 'lettuceonions',
         'cucumberslettuce',
@@ -10,4 +26,93 @@ public Boolean companionPlants(String plant1, String plant2) {
     String plantPair = plant1 + plant2;
 
     return validCompanionPairs.contains(plantPair);
-    }    
+    */
+/*
+    Map<String, Set<String>> validCompanions = new Map<String, Set<String>>{
+        'onions' => new Set<String>{'lettuce', 'carrots', 'tomatoes'},
+        'lettuce' => new Set<String>{'cucumbers', 'onions'},
+        'cucumbers' => new Set<String>{'lettuce'},
+        'carrots' => new Set<String>{'onions'},
+        'tomatoes' => new Set<String>{'onions'}
+    };
+
+    if (validCompanions.containsKey(plant1)) {
+        Set<String> companions = validCompanions.get(plant1);
+        return companions.contains(plant2);
+    }
+
+    return false;
+*/
+    /*
+    Map<String, List<String>> companionPlantMap = new Map<String, List<String>>{
+        'onions' => new List<String>{'lettuce', 'carrots', 'tomatoes'},
+        'lettuce' => new List<String>{'cucumbers', 'onions'},
+        'cucumbers' => new List<String>{'lettuce'},
+        'carrots' => new List<String>{'onions'},
+        'tomatoes' => new List<String>{'onions'}
+    };
+
+    List<String> validCompanions = companionPlantMap.get(plant1);
+
+    if (validCompanions != null && validCompanions.contains(plant2)) {
+        return true;
+    } else {
+        return false;
+    }
+    */
+
+/*
+    if ((plant1 == 'onions' && (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes')) ||
+            (plant1 == 'lettuce' && (plant2 == 'cucumbers' || plant2 == 'onions')) ||
+            (plant1 == 'cucumbers' && plant2 == 'lettuce') ||
+            (plant1 == 'carrots' && plant2 == 'onions') ||
+            (plant1 == 'tomatoes' && plant2 == 'onions')) {
+            return true;
+    } else {
+            return false;
+    }
+*/
+    /*
+        Boolean isCompanion=false;
+        
+        if ( plant1 == 'onions' && 
+            (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes')){
+            isCompanion =true;
+        }
+        else if( plant1 == 'lettuce' && 
+            (plant2 == 'cucumbers' || plant2 == 'onions')){
+            isCompanion =true;
+        } else if ( plant1 == 'cucumbers' && plant2 == 'lettuce'){
+            isCompanion =true;
+        } else if ( plant1 == 'carrots' && plant2 == 'onions'){
+            isCompanion =true;
+        } else if ( plant1 == 'tomatoes' && plant2 == 'onions'){
+            isCompanion =true;
+        } 
+   
+        return isCompanion;
+
+*/        
+
+switch on plant1 {
+     when 'onions' {
+         return (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
+     }
+     when 'lettuce' {
+         return (plant2 == 'cucumbers' || plant2 == 'onions');
+     }
+     when 'cucumbers' {
+         return (plant2 == 'lettuce');
+     }
+     when 'carrots' {
+         return (plant2 == 'onions');
+     }
+     when 'tomatoes' {
+         return (plant2 == 'onions');
+     }
+     when else {
+         return false; // Default case
+     }
+ }
+
+}
