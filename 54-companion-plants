@@ -1,23 +1,22 @@
 public Boolean companionPlants(String plant1, String plant2) {        
-          Boolean isCompanion = false;
-
-switch (plant1) {
-    case 'onions':
-        isCompanion = (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
-        break;
-    case 'lettuce':
-        isCompanion = (plant2 == 'cucumbers' || plant2 == 'onions');
-        break;
-    case 'cucumbers':
-        isCompanion = (plant2 == 'lettuce');
-        break;
-    case 'carrots':
-        isCompanion = (plant2 == 'onions');
-        break;
-    case 'tomatoes':
-        isCompanion = (plant2 == 'onions');
-        break;
-}
-
-return isCompanion;
+         switch on plant1 {
+     when 'onions' {
+         return (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
+     }
+     when 'lettuce' {
+         return (plant2 == 'cucumbers' || plant2 == 'onions');
+     }
+     when 'cucumbers' {
+         return (plant2 == 'lettuce');
+     }
+     when 'carrots' {
+         return (plant2 == 'onions');
+     }
+     when 'tomatoes' {
+         return (plant2 == 'onions');
+     }
+     when else {
+         return false; // Default case
+     }
+ }
     }    
