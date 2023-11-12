@@ -1,16 +1,23 @@
 public Boolean companionPlants(String plant1, String plant2) {        
-          Map<String, Set<String>> validCompanions = new Map<String, Set<String>>{
-    'onions' => new Set<String>{'lettuce', 'carrots', 'tomatoes'},
-    'lettuce' => new Set<String>{'cucumbers', 'onions'},
-    'cucumbers' => new Set<String>{'lettuce'},
-    'carrots' => new Set<String>{'onions'},
-    'tomatoes' => new Set<String>{'onions'}
-};
+          Boolean isCompanion = false;
 
-if (validCompanions.containsKey(plant1)) {
-    Set<String> companions = validCompanions.get(plant1);
-    return companions.contains(plant2);
+switch (plant1) {
+    case 'onions':
+        isCompanion = (plant2 == 'lettuce' || plant2 == 'carrots' || plant2 == 'tomatoes');
+        break;
+    case 'lettuce':
+        isCompanion = (plant2 == 'cucumbers' || plant2 == 'onions');
+        break;
+    case 'cucumbers':
+        isCompanion = (plant2 == 'lettuce');
+        break;
+    case 'carrots':
+        isCompanion = (plant2 == 'onions');
+        break;
+    case 'tomatoes':
+        isCompanion = (plant2 == 'onions');
+        break;
 }
 
-return false;
+return isCompanion;
     }    
